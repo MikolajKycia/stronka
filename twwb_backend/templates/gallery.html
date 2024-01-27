@@ -35,11 +35,13 @@
                 <h2>Komentarze:</h2>
                 <textarea placeholder="Dodaj komentarz"></textarea>
                 <button>Dodaj komentarz</button>
-                <div class="comment">{{ comment }}</div>
-                <div class="comment">a tutaj jestem drugi ja i też se coś napisałem</div>
-                <div class="comment">a tutaj jestem drugi ja i też se coś napisałem</div>
-                <div class="comment">a tutaj jestem drugi ja i też se coś napisałem</div>
-                <div class="comment">a tutaj jestem drugi ja i też se coś napisałem</div>
+
+                {% for comment in comments %}
+                <div class="comment">
+                    <i>{{comment.author }}: </i> {{ comment.content }}
+                </div>
+                {% endfor %}
+
             </div>
 
         </div>
