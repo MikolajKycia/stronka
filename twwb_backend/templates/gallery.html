@@ -68,11 +68,8 @@
         </div>
         <div class="comments-container">
             <h2>Comments:</h2>
-            <form id="comment-form" method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Add a comment!</button>
-            </form>
+            <button type="submit" href='../new_comment'>Add a comment!</button>
+
             {% for comment in comments %}
             <div class="comment">
                 <i>{{comment.author }}: </i> {{ comment.content }}
