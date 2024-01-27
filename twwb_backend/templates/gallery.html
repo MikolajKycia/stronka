@@ -14,23 +14,23 @@
 <body>
     <div class="container">
         <video autoplay muted loop id="background-video">
-            <source src="img/tlo3.mp4" type="video/mp4">
+            <source src="{% static 'img/tlo3.mp4' %}" type="video/mp4">
         </video>
         <h1>Gallery</h1>
         <a href="index">Home</a>
         <div class="image-container">
-            <div class="image"><img src="img/ryba1.jpg"></div>
-            <div class="image"><img src="img/ryba2.jpg"></div>
-            <div class="image"><img src="img/ryba3.jpg"></div>
-            <div class="image"><img src="img/ryba4.jpg"></div>
-            <div class="image"><img src="img/ryba5.jpg"></div>
-            <div class="image"><img src="img/ryba6.jpg"></div>
-            <div class="image"><img src="img/ryba7.jpg"></div>
-            <div class="image"><img src="img/ryba8.jpg"></div>
+            <div class="image"><img src="{% static 'pages/img/ryba1.jpg' %}"></div>
+            <div class="image"><img src="{% static 'pages/img/ryba2.jpg' %}"></div>
+            <div class="image"><img src="{% static 'pages/img/ryba3.jpg' %}"></div>
+            <div class="image"><img src="{% static 'pages/img/ryba4.jpg' %}"></div>
+            <div class="image"><img src="{% static 'pages/img/ryba5.jpg' %}"></div>
+            <div class="image"><img src="{% static 'pages/img/ryba6.jpg' %}"></div>
+            <div class="image"><img src="{% static 'pages/img/ryba7.jpg' %}"></div>
+            <div class="image"><img src="{% static 'pages/img/ryba8.jpg' %}"></div>
         </div>
         <div class="popup-image">
             <span>&times;</span>
-            <img src="img/ryba1.jpg">
+            <img src="{% static 'pages/img/ryba1.jpg' %}">
             <div class="comments-container">
                 <h2>Komentarze:</h2>
                 <textarea placeholder="Dodaj komentarz"></textarea>
