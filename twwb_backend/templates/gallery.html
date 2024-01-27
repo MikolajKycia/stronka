@@ -1,19 +1,23 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <title>Praca Mikołaja I Leszka</title>
-    <link rel="stylesheet" href="gallerystyle.css">
+    <link rel="stylesheet" href="{% static 'pages/gallerystyle.css' %}">
 </head>
+
 <body>
     <div class="container">
         <video autoplay muted loop id="background-video">
             <source src="img/tlo3.mp4" type="video/mp4">
         </video>
         <h1>Gallery</h1>
-        <a href="index.html">Home</a>
+        <a href="index">Home</a>
         <div class="image-container">
             <div class="image"><img src="img/ryba1.jpg"></div>
             <div class="image"><img src="img/ryba2.jpg"></div>
@@ -31,7 +35,7 @@
                 <h2>Komentarze:</h2>
                 <textarea placeholder="Dodaj komentarz"></textarea>
                 <button>Dodaj komentarz</button>
-                <div class="comment">no tutaj jestem se ja i se napisałem coś</div>
+                <div class="comment">{{ comment }}</div>
                 <div class="comment">a tutaj jestem drugi ja i też se coś napisałem</div>
                 <div class="comment">a tutaj jestem drugi ja i też se coś napisałem</div>
                 <div class="comment">a tutaj jestem drugi ja i też se coś napisałem</div>
@@ -40,29 +44,30 @@
 
         </div>
         <div class="bombelki">
-            <img src="bubble.png">
-            <img src="bubble.png">
-            <img src="bubble.png">
-            <img src="bubble.png">
-            <img src="bubble.png">
-            <img src="bubble.png">
-            <img src="bubble.png">
-            <img src="bubble.png">
-            <img src="bubble.png">
+            <img src="{% static 'pages/bubble.png' %}">
+            <img src="{% static 'pages/bubble.png' %}">
+            <img src="{% static 'pages/bubble.png' %}">
+            <img src="{% static 'pages/bubble.png' %}">
+            <img src="{% static 'pages/bubble.png' %}">
+            <img src="{% static 'pages/bubble.png' %}">
+            <img src="{% static 'pages/bubble.png' %}">
+            <img src="{% static 'pages/bubble.png' %}">
+            <img src="{% static 'pages/bubble.png' %}">
         </div>
 
     </div>
     <script>
-        document.querySelectorAll('.image-container img').forEach(image =>{
-            image.onclick = () =>{
+        document.querySelectorAll('.image-container img').forEach(image => {
+            image.onclick = () => {
                 document.querySelector('.popup-image').style.display = 'block';
                 document.querySelector('.popup-image img').src = image.getAttribute('src');
             }
         });
 
-        document.querySelector('.popup-image span').onclick = () =>{
+        document.querySelector('.popup-image span').onclick = () => {
             document.querySelector('.popup-image').style.display = 'none';
         }
     </script>
 </body>
+
 </html>
