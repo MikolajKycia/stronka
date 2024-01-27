@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pages.views import home_view, gallery_view, about_view
+from pages.views import home_view, gallery_view, about_view, new_comment_view
 from comments.views import forum_view
 
 urlpatterns = [
@@ -25,5 +25,6 @@ urlpatterns = [
     path("gallery/", gallery_view, name = "gallery"),
     path("forum/", forum_view, name = "forum"),
     path("about/", about_view, name = "about"),
+    path('new_comment/', new_comment_view, name='new_comment'),
     path("admin/", admin.site.urls),
 ]

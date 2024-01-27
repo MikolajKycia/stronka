@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <a href="index.html" class="brand">Home</a>
+        <a href="../home" class="brand">Home</a>
         <div class="menu-btn"></div>
         <div class="navigation">
             <div class="navigation-items">
@@ -68,9 +68,9 @@
         </div>
         <div class="comments-container">
             <h2>Comments:</h2>
-            <form id="comment-form">
-                <input type="text" id="username" placeholder="Twoje imię" name='author'>
-                <textarea id="comment" placeholder="Dodaj komentarz" name='content'></textarea>
+            <form id="comment-form" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
                 <button type="submit">Add a comment!</button>
             </form>
             {% for comment in comments %}
