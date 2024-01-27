@@ -195,7 +195,7 @@ body{
     animation: bubble 7s linear infinite;
 }
 .bombelki{
-    width: 60%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-around;
