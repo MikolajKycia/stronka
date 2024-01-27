@@ -6,14 +6,34 @@
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
     <title>Praca Mikołaja I Leszka</title>
     <link rel="stylesheet" href="gallerystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 <body>
+    <header>
+        <a href="#" class="brand">Home</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home</a>
+                <a href="#">About</a>
+                <a href="#">Explore</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="#">Forum</a>
+            </div>
+        </div>
+    </header>
+    <section class="home">
+        <div class="media-icons">
+            <a href="#"> <i class="fab fa-facebook-f"></i></a>
+            <a href="#"> <i class="fab fa-instagram"></i></a>
+            <a href="#"> <i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
     <div class="container">
         <video autoplay muted loop id="background-video">
             <source src="img/tlo3.mp4" type="video/mp4">
         </video>
         <h1>Gallery</h1>
-        <a href="index.html">Home</a>
         <div class="image-container">
             <div class="image"><img src="img/ryba1.jpg"></div>
             <div class="image"><img src="img/ryba2.jpg"></div>
@@ -24,6 +44,7 @@
             <div class="image"><img src="img/ryba7.jpg"></div>
             <div class="image"><img src="img/ryba8.jpg"></div>
         </div>
+
         <div class="popup-image">
             <span>&times;</span>
             <img src="img/ryba1.jpg">
