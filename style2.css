@@ -68,8 +68,8 @@ section img#przod
     background: #fff;
     white-space: nowrap;
     text-decoration: none;
-    border-radius: 15px;
-    font-size: 5.5vw;
+    border-radius: 5px;
+    font-size: 4.5vw;
     z-index: 11;
     margin-bottom: 600px;
     padding: 25px;
@@ -84,11 +84,11 @@ section img#przod
     text-decoration: none;
     display: inline-block;
     padding: 8px 30px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-weight: 500;
     color: #1680AC;
     background: #fff;
-    font-size: 4em;
+    font-size: 3.5em;
     z-index: 10;
     transform: translateY(100px);
     margin-bottom: 450px;
@@ -126,10 +126,10 @@ section img#przod
     text-align: center;
     background-color: rgba(37, 107, 46, 0);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-    backdrop-filter: ;
     padding: 10px;
     border: #fff;
-    border-radius: 40px;
+    max-width: 70%;
+    margin-left: 11rem;
     
 }
 
@@ -169,7 +169,7 @@ header .brand{
 header .navigation{
     position: relative;
 }
-/* div w divie ;O przyciski w prawym górnym */
+/* przyciski w prawym górnym */
 header .navigation .navigation-items a{
     position: relative;
     color: #ffffff;
@@ -179,7 +179,7 @@ header .navigation .navigation-items a{
     margin-left: 30px;
     transition: 0.3s ease;
 }
-/* div w divie ;O przyciski w prawym górnym ale animacja i potem hover myszkiem */
+/* przyciski w prawym górnym ale animacja i potem hover myszkiem */
 header .navigation .navigation-items a::before{
 content:  '';
 background: #ffffff;
@@ -192,6 +192,8 @@ transition: 0.3s ease;
 header .navigation .navigation-items a:hover:before{
     width: 100%;
 }
+
+/* BOMBLE */
 .bombelki img{
     width: 50px;
     animation: bubble 7s linear infinite;
@@ -251,6 +253,30 @@ header .navigation .navigation-items a:hover:before{
 .bombelki img:nth-child(7){
     animation-delay: 4s;
     width: 15px;
+}
+.bombelki img:nth-child(9){
+    animation-delay: 1s;
+    width: 150px;
+}
+.bombelki img:nth-child(10){
+    animation-delay: 2s;
+    width: 10px;
+}
+.bombelki img:nth-child(11){
+    animation-delay: 3s;
+    width: 25px;
+}
+.bombelki img:nth-child(12){
+    animation-delay: 1s;
+    width: 75px;
+}
+.bombelki img:nth-child(13){
+    animation-delay: 2s;
+    width: 30px;
+}
+.bombelki img:nth-child(14){
+    animation-delay: 3s;
+    width: 5px;
 }
   
 
