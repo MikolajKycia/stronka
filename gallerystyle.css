@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container
+{
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Ustawienie indeksu z lekka poniżej, aby inne elementy były na wierzchu */
+}
+.container h1{
+    font-size: 120px;
+    font-family: "Poppins", sant-serif;
+    font-weight: 700;
+    padding: 15px;
+    color: azure;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.container a{
+    font-size: 40px;
+    font-family: "Poppins", sant-serif;
+    font-weight: 700;
+    padding: 5x;
+    margin-left: 900px;
+    color: azure;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.container .image-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+
+}
+.container .image-container .image{
+    height: 200px;
+    width: 350px;
+    border: 5px solid rgb(35, 150, 92);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 2;
+}
+.container .image-container .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+.container .image-container .image:hover img{
+    transform: scale(1.1);
+}
+.container .popup-image{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    display: none;
+
+}
+.container .popup-image span{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+    margin-bottom: 300px;
+}
+.container .popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%); /* przesuniecie w gore i w bok */
+    border: 5px solid #8778bd;
+    border-radius: 5px;
+    max-width: 750px;
+    width: 100%;
+    object-fit: cover;
+}
+@media (max-width:768px){
+    .container .popup-image img{
+        width: 95%;
+    }
+}
+.container .comments-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('img/rybki.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 75%; /* Zwiększone szerokości okna ale komentarzy */
+    max-width: 750px; /* szerokość okna potrzebne jak chcesz zmieniac */
+    margin-top: 240px;
+}
+
+.container .comments-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: "Poppins", sant-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    
+}
+
+.container .comments-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: none;
+    border-radius: 15px;
+}
+
+.container .comments-container button {
+    padding: 10px 20px;
+    background-color: #509ee2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container .comments-container .comment {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #968ff0;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    font-family: "Poppins", sant-serif;
+    font-weight: 700;
+
+}
+.bombelki img{
+    width: 50px;
+    animation: bubble 7s linear infinite;
+}
+.bombelki{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0px;
+    z-index: 0;
+}
+@keyframes bubble{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+.bombelki img:nth-child(1){
+    animation-delay: 2s;
+    width: 25px;
+}
+.bombelki img:nth-child(2){
+    animation-delay: 3s;
+    width: 35px;
+}
+.bombelki img:nth-child(3){
+    animation-delay: 0s;
+    width: 115px;
+}
+.bombelki img:nth-child(4){
+    animation-delay: 4s;
+}
+.bombelki img:nth-child(5){
+    animation-delay: 1s;
+    width: 70px;
+}
+.bombelki img:nth-child(6){
+    animation-delay: 2s;
+    width: 40px;
+}
+.bombelki img:nth-child(8){
+    animation-delay: 2s;
+    width: 25px;
+}
+.bombelki img:nth-child(7){
+    animation-delay: 4s;
+    width: 15px;
+}

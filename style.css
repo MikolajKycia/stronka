@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sant-serif;
+    text-transform: capitalize;
 }
 .bombelki img{
     width: 50px;
