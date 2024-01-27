@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title> Strona Mikołaja i Leszka</title>
+    <link rel="stylesheet" href="{% static 'pages/style2.css' %}">
+    <style type="text/css">
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <a href="#" class="brand">Home</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="../home">Home</a>
+                <a href="../about">About</a>
+                <a href="../#">Explore</a>
+                <a href="../gallery">Gallery</a>
+                <a href="#">Forum</a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <img src="{% static 'pages/img/podowom.jpg' %}" id="srodek">
+        <img src="{% static 'pages/img/rybki.png' %}" id="przod">
+        <h2 id="text">Want to know more about us?</h2>
+        <a href="#sec" id="btn">Read</a>
+    </section>
+    <div class="sec" id="sec">
+        <h2>Who are we?</h2>
+        <p>We are a non-profit organization, which means that all donations
+            and funds we receive are dedicated to supporting marine animals.
+            Our work is made possible by the generosity and commitment of
+            our donors who believe in our mission and want to help protect
+            the oceans and their inhabitants.<br>
+            <br>Join our movement, help us protect and support marine animals,
+            for the sake of our planet and future generations
+            Supporting and protecting marine animals plays a crucial role
+            in maintaining the balance of oceanic ecosystems, which are incredibly
+            important for life on Earth. Through our non-profit activities,
+            led by ocean enthusiasts and their inhabitants, we can effectively
+            counteract the threats facing these amazing creatures.<br>
+            <br>Why It Matters?<br>
+            Biodiversity: The oceans are home to an immense diversity of life,
+            from microscopic organisms to whales. Preserving
+            this diversity is key to maintaining ecosystem stability.<br>
+            <br>Climate Regulation: Oceanic ecosystems play a significant
+            role in climate regulation by absorbing carbon dioxide and
+            producing oxygen. Protecting these ecosystems is therefore
+            essential for the health of the entire planet.<br><br>
+            Threats: Marine animals are exposed to numerous threats,
+            such as industrial fishing, plastic pollution,
+            climate change, and habitat loss. Our work focuses on reducing
+            these threats and rescuing these magnificent creatures.<br>
+            <br>How You can help<br>
+            Donating: Your financial support allows us to continue our
+            vital work of protecting and supporting marine life.<br>
+            <br>Volunteering: Join us as a volunteer and contribute your time
+            and skills to our conservation projects and initiatives.<br>
+            <br>Spreading Awareness: Share our message with your friends,
+            family, and community. Together, we can amplify our impact
+            and create positive change for marine animals.<br>
+
+        </p>
+
+    </div>
+    <div class="bombelki">
+        <img src="bubble.png">
+        <img src="{% static 'pages/bubble.png' %}">
+        <img src="{% static 'pages/bubble.png' %}">
+        <img src="{% static 'pages/bubble.png' %}">
+        <img src="{% static 'pages/bubble.png' %}">
+        <img src="{% static 'pages/bubble.png' %}">
+        <img src="{% static 'pages/bubble.png' %}">
+        <img src="{% static 'pages/bubble.png' %}">
+        <img src="{% static 'pages/bubble.png' %}">
+        <img src="{% static 'pages/bubble.png' %}">
+        <img src="{% static 'pages/bubble.png' %}">
+        <img src="{% static 'pages/bubble.png' %}">
+        <img src="{% static 'pages/bubble.png' %}">
+        <img src="{% static 'pages/bubble.png' %}">
+        <img src="{% static 'pages/bubble.png' %}">
+    </div>
+    <script>
+        let srodek = document.getElementById('srodek');
+        let przod = document.getElementById('przod');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            przod.style.top = value * 0.9 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 1.5 + 'px';
+        });
+    </script>
+
+</body>
+
+</html>

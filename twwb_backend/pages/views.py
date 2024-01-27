@@ -12,3 +12,6 @@ def gallery_view(request, *args, **kwargs):
         'comments': Comment.objects.all(),
     }
     return render(request, "gallery.html", context)
+
+def about_view(request):
+    return render(request, 'about.html')

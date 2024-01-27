@@ -9,35 +9,15 @@
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <title>Praca Mikołaja I Leszka</title>
     <link rel="stylesheet" href="{% static 'pages/gallerystyle.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <a href="index.html" class="brand">Home</a>
-        <div class="menu-btn"></div>
-        <div class="navigation">
-            <div class="navigation-items">
-                <a href="../home">Home</a>
-                <a href="../about">About</a>
-                <a href="#">Explore</a>
-                <a href="../gallery">Gallery</a>
-                <a href="#">Forum</a>
-            </div>
-        </div>
-    </header>
-    <section class="home">
-        <div class="media-icons">
-            <a href="#"> <i class="fab fa-facebook-f"></i></a>
-            <a href="#"> <i class="fab fa-instagram"></i></a>
-            <a href="#"> <i class="fab fa-twitter"></i></a>
-        </div>
-    </section>
     <div class="container">
         <video autoplay muted loop id="background-video">
-            <source src="{% static 'pages/img/tlo3.mp4' %}" type="video/mp4">
+            <source src="{% static 'img/tlo3.mp4' %}" type="video/mp4">
         </video>
         <h1>Gallery</h1>
+        <a href="index">Home</a>
         <div class="image-container">
             <div class="image"><img src="{% static 'pages/img/ryba1.jpg' %}"></div>
             <div class="image"><img src="{% static 'pages/img/ryba2.jpg' %}"></div>
@@ -48,11 +28,21 @@
             <div class="image"><img src="{% static 'pages/img/ryba7.jpg' %}"></div>
             <div class="image"><img src="{% static 'pages/img/ryba8.jpg' %}"></div>
         </div>
-
         <div class="popup-image">
             <span>&times;</span>
             <img src="{% static 'pages/img/ryba1.jpg' %}">
+            <div class="comments-container">
+                <h2>Komentarze:</h2>
+                <textarea placeholder="Dodaj komentarz"></textarea>
+                <button>Dodaj komentarz</button>
 
+                {% for comment in comments %}
+                <div class="comment">
+                    <i>{{comment.author }}: </i> {{ comment.content }}
+                </div>
+                {% endfor %}
+
+            </div>
 
         </div>
         <div class="bombelki">
@@ -66,21 +56,6 @@
             <img src="{% static 'pages/bubble.png' %}">
             <img src="{% static 'pages/bubble.png' %}">
         </div>
-        <div class="comments-container">
-            <h2>Comments:</h2>
-            <form id="comment-form">
-                <input type="text" id="username" placeholder="Twoje imię" name='author'>
-                <textarea id="comment" placeholder="Dodaj komentarz" name='content'></textarea>
-                <button type="submit">Add a comment!</button>
-            </form>
-            {% for comment in comments %}
-            <div class="comment">
-                <i>{{comment.author }}: </i> {{ comment.content }}
-            </div>
-            {% endfor %}
-        </div>
-
-    </div>
 
     </div>
     <script>
