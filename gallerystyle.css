@@ -5,6 +5,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient( #111055,rgb(13, 58, 24) );
+}
 .container
 {
     position: relative;
@@ -21,6 +26,10 @@
     width: auto;
     height: auto;
     z-index: -1; /* Ustawienie indeksu z lekka poniżej, aby inne elementy były na wierzchu */
+}
+#background-video:before{
+    background: linear-gradient(to top,#051d08,transparent);
+    z-index: 1000;
 }
 .container h1{
     font-size: 120px;
@@ -110,28 +119,28 @@
         width: 95%;
     }
 }
-.container .comments-container {
-    position: absolute;
+.comments-container {
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url('img/rybki.jpg');
-    background-size: cover;
-    background-position: center;
+    background-linear
     padding: 20px;
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 75%; /* Zwiększone szerokości okna ale komentarzy */
-    max-width: 750px; /* szerokość okna potrzebne jak chcesz zmieniac */
-    margin-top: 240px;
-    overflow-y: auto; /* to dodaje suwak jak jest za duzo komentarzy */
-    max-height: 400px; /* maksymalna wysokosc kontenera komentarzy*/
+    border-radius: 30px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    margin-top: 540px;
+    max-width: 80%;
+}
+.comments-container::before {
+    background: linear-gradient(to bottom,#051d08,transparent);
+    z-index: 999;
 }
 
-.container .comments-container h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+.comments-container h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     font-family: "Poppins", sant-serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -139,32 +148,47 @@
     
 }
 
-.container .comments-container textarea {
-    width: 100%;
+.comments-container textarea {
+    width: 40%;
     padding: 10px;
     margin-bottom: 10px;
     resize: none;
     border-radius: 15px;
+
 }
 
-.container .comments-container button {
+.comments-container button {
     padding: 10px 20px;
-    background-color: #509ee2;
+    background-color: #0e4e1c;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 100px;
+    margin-right: 50px;
 }
 
-.container .comments-container .comment {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #968ff0;
+.comments-container .comment {
+    margin-top: 30px;
+    height: 150px;
+    padding: 10px 40px;
+    max-width: 50%;
+    background-color: #0e8f79;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
     font-family: "Poppins", sant-serif;
     font-weight: 700;
+    align-items: center;
+    text-align: left;
+    margin-left: 30px;
 
+}
+
+.comments-container #comment-form{
+    position: relative;
+    top: 50%;
+    right: 30px;
+    flex-direction: column;
 }
 .bombelki img{
     width: 50px;
