@@ -1,0 +1,13 @@
+* {
+    color: white;
+}
+
+.contact-section {
+
+    padding: 2rem;
+    margin-top: 0;
+}
+
+section .contact-section h2 {
+    font: bold;
+}

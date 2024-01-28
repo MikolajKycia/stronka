@@ -28,3 +28,6 @@ def new_comment_view(request):
     }
 
     return render(request, 'new_comment.html', context)
+
+def contact_view(request):
+    return render(request, 'contact.html', {})
