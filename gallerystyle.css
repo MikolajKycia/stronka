@@ -64,8 +64,8 @@ body{
 
 }
 .container .image-container .image{
-    height: 350px;
-    width: 550px;
+    height: 15rem;
+    width: 30rem;
     border: 5px solid rgb(35, 150, 92);
     box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
     overflow: hidden;
@@ -107,7 +107,7 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -80%); /* przesuniecie w gore i w bok */
+    transform: translate(-50%, -50%); /* przesuniecie w gore i w bok */
     border: 5px solid #8778bd;
     border-radius: 5px;
     max-width: 750px;
@@ -124,13 +124,13 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-linear
+    background: #fff;
     padding: 20px;
     text-align: center;
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
-    margin-top: 540px;
-    max-width: 80%;
+    margin-top: 40rem;
+    max-width: 70%;
 }
 .comments-container::before {
     background: linear-gradient(to bottom,#051d08,transparent);
@@ -144,7 +144,7 @@ body{
     font-family: "Poppins", sant-serif;
     font-weight: 700;
     text-transform: uppercase;
-    color: #fff;
+    color: #1680AC;
     
 }
 
@@ -159,8 +159,8 @@ body{
 
 .comments-container button {
     padding: 10px 20px;
-    background-color: #0e4e1c;
-    color: white;
+    background-color:  #1680AC;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -173,21 +173,24 @@ body{
     height: 150px;
     padding: 10px 40px;
     max-width: 50%;
-    background-color: #0e8f79;
-    border-radius: 15px;
+    color:  #1680AC;
+    background-color: #dce4e4;
+    border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
     font-family: "Poppins", sant-serif;
     font-weight: 700;
     align-items: center;
     text-align: left;
     margin-left: 30px;
+    margin-bottom: 30px;
+    
 
 }
 
 .comments-container #comment-form{
     position: relative;
     top: 50%;
-    right: 30px;
+    right: 6rem;
     flex-direction: column;
 }
 .bombelki img{
