@@ -131,6 +131,8 @@ body{
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
     margin-top: 40rem;
     max-width: 70%;
+    max-height: 60rem;
+    overflow-y: auto;
 }
 .comments-container::before {
     background: linear-gradient(to bottom,#051d08,transparent);
